@@ -1,3 +1,9 @@
 ### Hi there 👋
-![sunya9's github stats](profile/stats.svg)
-![Top Langs](profile/top-langs.svg)
+
+<div style="display:flex">
+<a href="https://github.com/sunya9">
+  <img height=200 align="center" src="./profile/stats.svg" alt="sunya9's GitHub stats" />
+</a><a href="https://github.com/sunya9">
+  <img height=200 align="center" src="./profile/top-langs.svg" alt="sunya9's top langs" />
+</a>
+</div>
