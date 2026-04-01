@@ -1,6 +1,8 @@
 name: Update README cards
 
 on:
+  push:
+    branches: [main]
   schedule:
     - cron: "0 3 * * *"
   workflow_dispatch:
@@ -29,12 +31,21 @@ jobs:
 
       - name: Combine cards into single SVG
         run: |
+          get_attr() { grep -oP "(?<=$1=\")[^\"]*" "$2" | head -1; }
+          sw=$(get_attr width profile/stats.svg)
+          sh=$(get_attr height profile/stats.svg)
+          lw=$(get_attr width profile/top-langs.svg)
+          lh=$(get_attr height profile/top-langs.svg)
+          gap=16
+          tw=$((sw + gap + lw))
+          th=$((sh > lh ? sh : lh))
+          lx=$((sw + gap))
           stats=$(sed '/<\?xml/d' profile/stats.svg)
           langs=$(sed '/<\?xml/d' profile/top-langs.svg)
           cat > profile/combined.svg << SVGEOF
-          <svg xmlns="http://www.w3.org/2000/svg" width="900" height="200">
-            <svg x="0" y="0" width="450" height="200">${stats}</svg>
-            <svg x="450" y="0" width="450" height="200">${langs}</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${tw} ${th}">
+            <svg x="0" y="0" width="${sw}" height="${sh}">${stats}</svg>
+            <svg x="${lx}" y="0" width="${lw}" height="${lh}">${langs}</svg>
           </svg>
           SVGEOF
 
