@@ -1,4 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 783 285">
+  <style>
+    @media (prefers-color-scheme: dark) {
+      .stat, .lang-name, .not_bold, .bold { fill: #ffffff !important; }
+      .header { fill: #40c9d2 !important; }
+      .icon { fill: #c5a3ff !important; }
+      .rank-text { fill: #ffffff !important; }
+      .rank-circle-rim { stroke: #40c9d2 !important; }
+      .rank-circle { stroke: #40c9d2 !important; }
+    }
+  </style>
   <svg x="0" y="0" width="467" height="195">
       <svg
         width="467"
@@ -9,7 +19,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">sunya's GitHub Stats, Rank: A</title>
-        <desc id="descId">Total Stars Earned: 112, Total Commits  (last year) : 737, Total PRs: 328, Total Issues: 105, Contributed to (last year): 2</desc>
+        <desc id="descId">Total Stars Earned: 112, Total Commits  (last year) : 738, Total PRs: 328, Total Issues: 105, Contributed to (last year): 2</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +83,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 52.452996170496526;
+        stroke-dashoffset: 52.43796697569641;
       }
     }
   
@@ -177,7 +187,7 @@
         x="219.01"
         y="12.5"
         data-testid="commits"
-      >737</text>
+      >738</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
