@@ -44,6 +44,16 @@ jobs:
           langs=$(sed '/<\?xml/d' profile/top-langs.svg)
           cat > profile/combined.svg << SVGEOF
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${tw} ${th}">
+            <style>
+              @media (prefers-color-scheme: dark) {
+                .stat, .lang-name, .not_bold, .bold { fill: #ffffff !important; }
+                .header { fill: #40c9d2 !important; }
+                .icon { fill: #c5a3ff !important; }
+                .rank-text { fill: #ffffff !important; }
+                .rank-circle-rim { stroke: #40c9d2 !important; }
+                .rank-circle { stroke: #40c9d2 !important; }
+              }
+            </style>
             <svg x="0" y="0" width="${sw}" height="${sh}">${stats}</svg>
             <svg x="${lx}" y="0" width="${lw}" height="${lh}">${langs}</svg>
           </svg>
