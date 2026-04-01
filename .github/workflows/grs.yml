@@ -27,6 +27,17 @@ jobs:
           path: profile/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Combine cards into single SVG
+        run: |
+          stats=$(sed '/<\?xml/d' profile/stats.svg)
+          langs=$(sed '/<\?xml/d' profile/top-langs.svg)
+          cat > profile/combined.svg << SVGEOF
+          <svg xmlns="http://www.w3.org/2000/svg" width="900" height="200">
+            <svg x="0" y="0" width="450" height="200">${stats}</svg>
+            <svg x="450" y="0" width="450" height="200">${langs}</svg>
+          </svg>
+          SVGEOF
+
       - name: Commit cards
         run: |
           git config user.name "github-actions[bot]"
