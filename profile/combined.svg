@@ -19,7 +19,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">sunya&#39;s GitHub Stats, Rank: A</title>
-        <desc id="descId">Total Stars Earned: 119, Total Commits  (last year) : 1056, Total PRs: 387, Total Issues: 105, Contributed to (last year): 2</desc>
+        <desc id="descId">Total Stars Earned: 119, Total Commits  (last year) : 1060, Total PRs: 387, Total Issues: 105, Contributed to (last year): 2</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -83,7 +83,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 43.20694129009229;
+        stroke-dashoffset: 43.182219646724754;
       }
     }
   
